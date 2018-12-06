@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: demo-nginx
-        image: zaitsxl/demo-nginx
+        image: rancher-demo
         ports:
         - containerPort: 80
