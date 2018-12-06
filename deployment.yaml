@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-nginx-deployment
+  labels:
+    app: demo-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: demo-nginx
+  template:
+    metadata:
+      labels:
+        app: demo-nginx
+    spec:
+      containers:
+      - name: demo-nginx
+        image: zaitsxl/demo-nginx
+        ports:
+        - containerPort: 80
