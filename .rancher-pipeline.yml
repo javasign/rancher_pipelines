@@ -6,7 +6,7 @@ stages:
       buildContext: .
       tag: rancher-demo
       pushRemote: true
-      registry: 127.0.0.1:5000
+      registry: index.docker.io
 - name: Deploy image into cluster
   steps:
   - applyYamlConfig:
