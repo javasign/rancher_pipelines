@@ -1,0 +1,14 @@
+stages:
+- name: Build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: rancher-demo
+      pushRemote: true
+      registry: 127.0.0.1:5000
+- name: Deploy image into cluster
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
