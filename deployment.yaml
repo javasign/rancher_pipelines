@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-nginx-deployment
+  name: rancher-demo-deployment
   labels:
-    app: demo-nginx
+    app: rancher-demo
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: demo-nginx
+      app: rancher-demo
   template:
     metadata:
       labels:
-        app: demo-nginx
+        app: rancher-demo
     spec:
       containers:
-      - name: demo-nginx
-        image: rancher-demo
+      - name: rancher-demo
+        image: zaitsxl/rancher-demo
         ports:
         - containerPort: 80
