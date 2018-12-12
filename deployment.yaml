@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: rancher-demo
-        image: zaitsxl/rancher-demo
+        image: zaitsxl/rancher-demo:latest
         ports:
         - containerPort: 80
