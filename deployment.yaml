@@ -4,7 +4,6 @@ metadata:
   name: rancher-demo-deployment
   labels:
     app: rancher-demo
-  namespace: default
 spec:
   replicas: 1
   selector:
@@ -27,7 +26,6 @@ metadata:
   labels:
     app: rancher-demo
   name: rancher-demo-service
-  namespace: default
 spec:
   clusterIP: 10.39.252.249
   externalTrafficPolicy: Cluster
